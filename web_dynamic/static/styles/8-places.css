@@ -82,17 +82,17 @@
 }
 
 .information .max_guest {
-    background: url("../images/icon_group.png") no-repeat top center;
+    background: url("../../images/icon_group.png") no-repeat top center;
     width: 100px;
 }
 
 .information .number_rooms {
-    background: url("../images/icon_bed.png") no-repeat top center;
+    background: url("../../images/icon_bed.png") no-repeat top center;
     width: 100px;
 }
 
 .information .number_bathrooms {
-    background: url("../images/icon_bath.png") no-repeat top center;
+    background: url("../../images/icon_bath.png") no-repeat top center;
     width: 100px;
 }
 
