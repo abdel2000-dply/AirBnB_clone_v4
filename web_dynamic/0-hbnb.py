@@ -39,7 +39,7 @@ def hbnb():
                            states=st_ct,
                            amenities=amenities,
                            places=places,
-                           catch_id = uuid4()
+                           cache_id = uuid4()
                            )
 
 
