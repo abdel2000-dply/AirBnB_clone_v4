@@ -1,5 +1,5 @@
 $(() => {
-  const url = 'http://0.0.0.0:5001/api/v1/status/';
+  const url = 'http://127.0.0.1:5001/api/v1/status/';
   $.getJSON(url, (data) => {
     console.log(data);
     if (data.status === 'OK') {
