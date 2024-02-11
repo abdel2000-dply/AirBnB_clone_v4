@@ -7,10 +7,11 @@ $(() => {
     data: JSON.stringify({}),
     success: function(data) {
       for (const place of data) {
-        const template = `<article>
+        const template = `
+        <article>
           <div class="title_box">
             <h2>${place.name}</h2>
-            <div class="price_by_night">${place.price_by_night}</div>
+            <div class="price_by_night">$${place.price_by_night}</div>
           </div>
           <div class="information">
 	          <div class="max_guest">${place.max_guest} Guest</div>
