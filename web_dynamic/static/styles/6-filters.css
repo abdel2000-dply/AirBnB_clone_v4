@@ -101,6 +101,7 @@ button:hover {
     margin-top: 1.5%;
     margin-bottom: 5%;
     margin-left: 0px;
+    display: inline;
 }
 
 .amenities:hover .popover,
