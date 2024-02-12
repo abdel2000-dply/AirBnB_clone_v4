@@ -57,8 +57,8 @@ $(() => {
   });
 
   $('button').click(() => {
-    $('.places').empty()
-    getPlaces({amenities: amenity_ids})
+    $('.places').empty();
+    getPlaces({amenities: amenity_ids});
   });
 });
   
