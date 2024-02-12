@@ -8,10 +8,11 @@ $(() => {
       data: JSON.stringify(amenities),
       success: function(data) {
         for (const place of data) {
-          const template = `<article>
+          const template = `
+          <article>
             <div class="title_box">
               <h2>${place.name}</h2>
-              <div class="price_by_night">${place.price_by_night}</div>
+              <div class="price_by_night">$${place.price_by_night}</div>
             </div>
             <div class="information">
               <div class="max_guest">${place.max_guest} Guest</div>
@@ -30,7 +31,6 @@ $(() => {
 
   const statusUrl = 'http://127.0.0.1:5001/api/v1/status/';
   $.getJSON(statusUrl, (data) => {
-    console.log(data);
     if (data.status === 'OK') {
       $('#api_status').addClass('available');
     }
@@ -57,11 +57,11 @@ $(() => {
         });
         $('.locations h4').text(state_names.join(', '));
         break;
-
+        
         case 'cities':
-        const city_names = filters[curr_input].map((id) => {
-          return $(`.popover ul li input[data-id=${id}]`).attr('data-name');
-        });
+          const city_names = filters[curr_input].map((id) => {
+            return $(`.popover ul li input[data-id=${id}]`).attr('data-name');
+          });
         $('.locations h4').text(city_names.join(', '));
         break;
 
@@ -78,7 +78,8 @@ $(() => {
   });
 
   $('button').click(() => {
-    getPlaces(filters)
+    $('.places').empty();
+    getPlaces(filters);
   });
 });
   
